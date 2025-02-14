@@ -39,21 +39,44 @@
 
 // result (add(6,5))
 
+//------------------------------------------------
+
+// /* no TS elejá identifica que é um objeto, 
+//  sem precisar indicar depois do nome da const */ 
+// const user :{
+//     firstName: string;
+//     age: number;
+//     lastName: string
+// /*Eu até poderia fazer isso ai em cima caso não fosse obvio, 
+// mas o TS já identifica os tipos dentro do objeto,
+// Então por boas práticas, NÃO se coloca esse hard code */    
+// } = {    
+//     firstName : 'Saviam',
+//     age: 36,
+//     lastName: 'S'
+// }
+
+// user.lastName = 'João'; 
+
+// //----------------------------------------------
 
 
-/* no TS elejá identifica que é um objeto, 
- sem precisar indicar depois do nome da const */ 
-const user :{
-    firstName: string;
-    age: number;
-    lastName: string
-/*Eu até poderia fazer isso ai em cima caso não fosse obvio, 
-mas o TS já identifica os tipos dentro do objeto,
-Então por boas práticas, NÃO se coloca esse hard code */    
-} = {    
-    firstName : 'Saviam',
-    age: 36,
-    lastName: 'S'
+// let itemInput: unknown /*O unknown é diferente do any porque
+// ele precisa de uma verificação, não aceita qualquer coisa no tipo */
+// let itemName: string
+
+// itemInput = 10
+// itemInput = 'Apple'
+// if(itemInput === 'string'){
+//     itemName = itemInput
+// }
+
+function generateError(message: string, code: number): never{
+    throw{message: message, errorCode: code}
 }
 
-user.lastName = 'João'; 
+
+console.log(generateError('The application crashed', 500))
+
+/*O 'never' para a aplicação, gera um erro, 
+ele não passa nenhuma informação */
