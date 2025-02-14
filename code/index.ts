@@ -31,3 +31,11 @@
 //     return num1 + num2
 // }
 
+// function result (price: number){ // apesar de ter tipado como number, o TS autodetecta a função como 'void' e não 'number', só porque a função não tem um return
+
+//     console.log('the result is ' + price)
+
+// }
+
+// result (add(6,5))
+

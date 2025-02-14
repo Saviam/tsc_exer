@@ -9,14 +9,16 @@
 //Apple, 3, true
 // let item:[string, number, boolean] = ['Apple', 3, true] // aqui é o uso do Taple, onde voce consegue definir diferentes tipos dentro do mesmo array, só definir quais são e qual a ordem q eles devem vir
 // item[1].toString // esse é só um exemplo code complete, tem no TS mas não no JS
-var Role;
-(function (Role) {
-    Role[Role["admin"] = 1] = "admin";
-    Role[Role["read"] = 2] = "read";
-    Role[Role["backup"] = 3] = "backup";
-})(Role || (Role = {}));
-const user = {
-    firstName: 'Saviam',
-    age: 40,
-    role: Role.backup
-};
+// enum Role{admin = 1, read = 2, backup = 3} // com enum é possivel definir as variaveis e valores sem ter q criar uma variavel pra cada uma
+// const user = {
+//     firstName:'Saviam',
+//     age: 40,
+//     role:Role.backup
+// }
+function add(num1, num2) {
+    return num1 + num2;
+}
+function result(price) {
+    console.log('the result is ' + price);
+}
+result(add(6, 5));
