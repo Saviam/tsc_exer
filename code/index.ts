@@ -39,3 +39,21 @@
 
 // result (add(6,5))
 
+
+
+/* no TS elejá identifica que é um objeto, 
+ sem precisar indicar depois do nome da const */ 
+const user :{
+    firstName: string;
+    age: number;
+    lastName: string
+/*Eu até poderia fazer isso ai em cima caso não fosse obvio, 
+mas o TS já identifica os tipos dentro do objeto,
+Então por boas práticas, NÃO se coloca esse hard code */    
+} = {    
+    firstName : 'Saviam',
+    age: 36,
+    lastName: 'S'
+}
+
+user.lastName = 'João'; 
