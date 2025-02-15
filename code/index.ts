@@ -7,14 +7,16 @@
 
 //---- segundo dia (pelo curso)-----
 
-// let values: number [] = [10, 20, 40, 30] //colocando chavinhas amarelhas depois de definir q é number, ele vai indicar se tem algum erro dentro do array
+// let values: number [] = [10, 20, 40, 30] //colocando chavinhas amarelhas depois de definir q é number, ele vai indicar se tem
+//  algum erro dentro do array
 
 
 
 
 //Apple, 3, true
 
-// let item:[string, number, boolean] = ['Apple', 3, true] // aqui é o uso do Taple, onde voce consegue definir diferentes tipos dentro do mesmo array, só definir quais são e qual a ordem q eles devem vir
+// let item:[string, number, boolean] = ['Apple', 3, true] // aqui é o uso do Taple, onde voce consegue definir diferentes tipos
+//  dentro do mesmo array, só definir quais são e qual a ordem q eles devem vir
 
 // item[1].toString // esse é só um exemplo code complete, tem no TS mas não no JS
 
@@ -201,35 +203,45 @@ permitido para ser inserido no input ou variavel */
 
 // Day 3 - Exercise 4
 
-// Day 3 - Exercise 4
 
-const integer: number = 6;
-const float: number = 6.66;
-const hex: number   = 0xf00d;
-const binary: number  = 0b1010011010;
-const octal: number  = 0o744;
-const negZero: number = -0;
-const actuallyNumber: number = NaN;
-const largestNumber :number = Number.MAX_VALUE;
-const mostBiglyNumber: number = Infinity;
+// const integer: number = 6;
+// const float: number = 6.66;
+// const hex: number   = 0xf00d;
+// const binary: number  = 0b1010011010;
+// const octal: number  = 0o744;
+// const negZero: number = -0;
+// const actuallyNumber: number = NaN;
+// const largestNumber :number = Number.MAX_VALUE;
+// const mostBiglyNumber: number = Infinity;
 
-const members: number[] = [ // aqui estava 'any, mudou pra numer porque as variaveis são number
-  integer,
-  float,
-  hex,
-  binary,
-  octal,
-  negZero,
-  actuallyNumber,
-  largestNumber,
-  mostBiglyNumber
-];
+// const members: number[] = [ // aqui estava 'any, mudou pra numer porque as variaveis são number
+//   integer,
+//   float,
+//   hex,
+//   binary,
+//   octal,
+//   negZero,
+//   actuallyNumber,
+//   largestNumber,
+//   mostBiglyNumber
+// ];
 
-members[0] = 12345; //só tirou aspas simples pq é number
+// members[0] = 12345; //só tirou aspas simples pq é number
 
-console.log(members);
-
+// console.log(members);
 
 
+//---------------------------------------
+
+// Day 3 - Exercise 5
+
+const sequence :number[]  = Array.from(Array(10).keys());
+const animals : string[]  = ['pangolin', 'aardvark', 'echidna', 'binturong'];
+const stringsAndNumbers : (number | string)[] = [1, 'one', 2, 'two', 3, 'three'];
+const allMyArrays :(number | string)[][] = [sequence, animals, stringsAndNumbers];
+/* Na ultima linhas ele colocou chaves duas vezes porque é um array dos outros arrays, 
+então precisa indicar assim */
+
+console.log(allMyArrays);
 
 
