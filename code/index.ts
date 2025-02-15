@@ -71,12 +71,13 @@
 //     itemName = itemInput
 // }
 
-function generateError(message: string, code: number): never{
-    throw{message: message, errorCode: code}
-}
+// function generateError(message: string, code: number): never{
+//     throw{message: message, errorCode: code}
+// }
 
 
-console.log(generateError('The application crashed', 500))
+// console.log(generateError('The application crashed', 500))
 
-/*O 'never' para a aplicação, gera um erro, 
-ele não passa nenhuma informação */
+// /*O 'never' para a aplicação, gera um erro, 
+// ele não passa nenhuma informação */
+
