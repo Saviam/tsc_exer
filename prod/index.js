@@ -106,7 +106,19 @@ permitido para ser inserido no input ou variavel */
 //     id: 221,
 //     role:'Admin'
 // }
-// Day 3 - Exercise 1
-let pi = 3.14159;
-let tau = pi * 2;
-console.log(`${tau} is ${pi} times two.`);
+// // Day 3 - Exercise 1
+// let pi = 3.14159;
+// let tau = pi * 2;
+// console.log(`${tau} is ${pi} times two.`);
+// //-------------------------
+// // // Day 3 - Exercise 2
+// let pie : string // só inclui o 'string' pra falar q era pra ser string
+// pie = 'blueberry'
+// console.log(`I like to eat ${pie}-flavored pie.`)
+// //----------------------------------------
+// Day 3 - Exercise 3
+let isDouglas;
+isDouglas = false;
+/*Também funcionaria se colocasse o ' = true' logo depois
+de definir como boolean */
+console.log(`${isDouglas ? 'Oh, Hi Douglas' : 'Who are you?'}`);
