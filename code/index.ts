@@ -134,3 +134,30 @@ let productSize: 'S' | 'M' | 'L'
 
 productPrice = 10
 productSize = 'S'
+
+
+//------------------------------------
+
+
+//------------Intersection--------------
+
+
+type User = {
+    firstName: string
+    age: Number
+
+}
+
+type JobRole = {
+    id: number
+    role: string
+}
+
+type employee = User & JobRole
+
+const e1: employee = {
+    firstName: "Saviam",
+    age: 35,
+    id: 221,
+    role:'Admin'
+}

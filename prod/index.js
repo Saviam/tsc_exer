@@ -65,10 +65,27 @@
 //         age: 36,
 //     }
 // --------------------------------------
-function userInput(input1, input2) {
-    let result;
-    result = input1 + input2;
-    return result;
-}
-const combinePrices = userInput(10, 20);
-console.log(combinePrices);
+//-----Usando Union ( união de 2 tipos para tipos diferentes de dados no input)
+// e pode adicionar mais de 2 tipos também 
+// function userInput (input1: number | string, input2: number| string) { // esse outro number, é chamando de hard code, mas pode deixar q o TS faz o auto detect
+//     let result 
+//     if (typeof input1 === 'number' && typeof input2 === 'number'){
+//         result = input1 + input2
+//     }
+//     else{
+//         result = input1.toString() + input2.toString()
+//     }
+//     return result
+// }
+// const combinePrices = userInput(10,20)
+// console.log(combinePrices)
+// const combineName = userInput('Apple','Avocado')
+// console.log(combineName)
+//--------------------------------------------------
+//------Literal Types--------
+/*Com literal types, voce define exatamente qual o valor
+permitido para ser inserido no input ou variavel */
+let productPrice;
+let productSize;
+productPrice = 10;
+productSize = 'S';
