@@ -47,9 +47,28 @@
 // if(itemInput === 'string'){
 //     itemName = itemInput
 // }
-function generateError(message, code) {
-    throw { message: message, errorCode: code };
+// function generateError(message: string, code: number): never{
+//     throw{message: message, errorCode: code}
+// }
+// console.log(generateError('The application crashed', 500))
+// /*O 'never' para a aplicação, gera um erro, 
+// ele não passa nenhuma informação */
+// ------alias type------------
+// type Users = {
+//     firstName: string;
+//     age: number;
+// }
+// /*Usando 'type' pode armazenar propriedades num grupo e pode
+// reutilizar  em outras constantes tambem*/
+// const user : Users = {    
+//         firstName : 'Saviam',
+//         age: 36,
+//     }
+// --------------------------------------
+function userInput(input1, input2) {
+    let result;
+    result = input1 + input2;
+    return result;
 }
-console.log(generateError('The application crashed', 500));
-/*O 'never' para a aplicação, gera um erro,
-ele não passa nenhuma informação */ 
+const combinePrices = userInput(10, 20);
+console.log(combinePrices);

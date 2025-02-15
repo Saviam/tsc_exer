@@ -85,16 +85,39 @@
 
 // ------alias type------------
 
-type Users = {
-    firstName: string;
-    age: number;
-}
-/*Usando 'type' pode armazenar propriedades num grupo e pode
-reutilizar  em outras constantes tambem*/
+// type Users = {
+//     firstName: string;
+//     age: number;
+// }
+// /*Usando 'type' pode armazenar propriedades num grupo e pode
+// reutilizar  em outras constantes tambem*/
 
-const user : Users = {    
-        firstName : 'Saviam',
-        age: 36,
+// const user : Users = {    
+//         firstName : 'Saviam',
+//         age: 36,
         
-    }
+//     }
     
+// --------------------------------------
+
+
+//-----Usando Union ( união de 2 tipos para tipos diferentes de dados no input)
+
+function userInput (input1: number | string, input2: number| string) { // esse outro number, é chamando de hard code, mas pode deixar q o TS faz o auto detect
+    let result 
+    if (typeof input1 === 'number' && typeof input2 === 'number'){
+        result = input1 + input2
+    }
+    else{
+        result = input1.toString() + input2.toString()
+    }
+    return result
+}
+
+const combinePrices = userInput(10,20)
+console.log(combinePrices)
+
+const combineName = userInput('Apple','Avocado')
+console.log(combineName)
+
+
