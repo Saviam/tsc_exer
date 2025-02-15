@@ -129,11 +129,11 @@
 /*Com literal types, voce define exatamente qual o valor 
 permitido para ser inserido no input ou variavel */
 
-let productPrice : 10 | 20 | 30
-let productSize: 'S' | 'M' | 'L'
+// let productPrice : 10 | 20 | 30
+// let productSize: 'S' | 'M' | 'L'
 
-productPrice = 10
-productSize = 'S'
+// productPrice = 10
+// productSize = 'S'
 
 
 //------------------------------------
@@ -142,22 +142,31 @@ productSize = 'S'
 //------------Intersection--------------
 
 
-type User = {
-    firstName: string
-    age: Number
+// type User = {
+//     firstName: string
+//     age: Number
 
-}
+// }
 
-type JobRole = {
-    id: number
-    role: string
-}
+// type JobRole = {
+//     id: number
+//     role: string
+// }
 
-type employee = User & JobRole
+// type employee = User & JobRole
 
-const e1: employee = {
-    firstName: "Saviam",
-    age: 35,
-    id: 221,
-    role:'Admin'
-}
+// const e1: employee = {
+//     firstName: "Saviam",
+//     age: 35,
+//     id: 221,
+//     role:'Admin'
+// }
+
+
+// Day 3 - Exercise 1
+
+let pi = 3.14159;
+let tau = pi * 2;
+
+console.log(`${tau} is ${pi} times two.`);
+
