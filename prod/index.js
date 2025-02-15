@@ -116,9 +116,34 @@ permitido para ser inserido no input ou variavel */
 // pie = 'blueberry'
 // console.log(`I like to eat ${pie}-flavored pie.`)
 // //----------------------------------------
-// Day 3 - Exercise 3
-let isDouglas;
-isDouglas = false;
-/*Também funcionaria se colocasse o ' = true' logo depois
-de definir como boolean */
-console.log(`${isDouglas ? 'Oh, Hi Douglas' : 'Who are you?'}`);
+// // Day 3 - Exercise 3
+// let isDouglas: boolean
+// isDouglas = false
+// /*Também funcionaria se colocasse o ' = true' logo depois
+// de definir como boolean */
+// console.log(`${isDouglas ? 'Oh, Hi Douglas' : 'Who are you?'}`)
+//-----------------------------
+// Day 3 - Exercise 4
+// Day 3 - Exercise 4
+const integer = 6;
+const float = 6.66;
+const hex = 0xf00d;
+const binary = 0b1010011010;
+const octal = 0o744;
+const negZero = -0;
+const actuallyNumber = NaN;
+const largestNumber = Number.MAX_VALUE;
+const mostBiglyNumber = Infinity;
+const members = [
+    integer,
+    float,
+    hex,
+    binary,
+    octal,
+    negZero,
+    actuallyNumber,
+    largestNumber,
+    mostBiglyNumber
+];
+members[0] = 12345; //só tirou aspas simples pq é number
+console.log(members);

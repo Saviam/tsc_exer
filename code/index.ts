@@ -185,18 +185,49 @@ permitido para ser inserido no input ou variavel */
 
 
 
-// Day 3 - Exercise 3
+// // Day 3 - Exercise 3
 
-let isDouglas: boolean
-isDouglas = false
+// let isDouglas: boolean
+// isDouglas = false
 
-/*Também funcionaria se colocasse o ' = true' logo depois
-de definir como boolean */
+// /*Também funcionaria se colocasse o ' = true' logo depois
+// de definir como boolean */
 
-console.log(`${isDouglas ? 'Oh, Hi Douglas' : 'Who are you?'}`)
+// console.log(`${isDouglas ? 'Oh, Hi Douglas' : 'Who are you?'}`)
 
 
+//-----------------------------
 
+
+// Day 3 - Exercise 4
+
+// Day 3 - Exercise 4
+
+const integer: number = 6;
+const float: number = 6.66;
+const hex: number   = 0xf00d;
+const binary: number  = 0b1010011010;
+const octal: number  = 0o744;
+const negZero: number = -0;
+const actuallyNumber: number = NaN;
+const largestNumber :number = Number.MAX_VALUE;
+const mostBiglyNumber: number = Infinity;
+
+const members: number[] = [ // aqui estava 'any, mudou pra numer porque as variaveis são number
+  integer,
+  float,
+  hex,
+  binary,
+  octal,
+  negZero,
+  actuallyNumber,
+  largestNumber,
+  mostBiglyNumber
+];
+
+members[0] = 12345; //só tirou aspas simples pq é number
+
+console.log(members);
 
 
 
