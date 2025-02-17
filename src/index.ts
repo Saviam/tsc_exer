@@ -257,3 +257,4 @@ permitido para ser inserido no input ou variavel */
 
 let code: number = 70
 console.log(code)
+
