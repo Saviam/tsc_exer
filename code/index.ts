@@ -247,4 +247,13 @@ permitido para ser inserido no input ou variavel */
 
 //----Dia 4 ( pelo curso)---------------
 
+/* Elw usa o comando tsc --watch para compilar
+ automaticamente*/ 
 
+ /*Ele incluiu o exclude no ts.config.json, 
+ para não alterar um arquivo especifico, no caso
+ ele excluiu atualizações no app.js,mesmo que mande
+ compilar */
+
+let code: number = 70
+console.log(code)

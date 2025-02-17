@@ -150,10 +150,19 @@ permitido para ser inserido no input ou variavel */
 // console.log(members);
 //---------------------------------------
 // Day 3 - Exercise 5
-const sequence = Array.from(Array(10).keys());
-const animals = ['pangolin', 'aardvark', 'echidna', 'binturong'];
-const stringsAndNumbers = [1, 'one', 2, 'two', 3, 'three'];
-const allMyArrays = [sequence, animals, stringsAndNumbers];
-/* Na ultima linhas ele colocou chaves duas vezes porque é um array dos outros arrays,
-então precisa indicar assim */
-console.log(allMyArrays);
+// const sequence :number[]  = Array.from(Array(10).keys());
+// const animals : string[]  = ['pangolin', 'aardvark', 'echidna', 'binturong'];
+// const stringsAndNumbers : (number | string)[] = [1, 'one', 2, 'two', 3, 'three'];
+// const allMyArrays :(number | string)[][] = [sequence, animals, stringsAndNumbers];
+// /* Na ultima linhas ele colocou chaves duas vezes porque é um array dos outros arrays, 
+// então precisa indicar assim */
+// console.log(allMyArrays);
+//----Dia 4 ( pelo curso)---------------
+/* Elw usa o comando tsc --watch para compilar
+ automaticamente*/
+/*Ele incluiu o exclude no ts.config.json,
+para não alterar um arquivo especifico, no caso
+ele excluiu atualizações no app.js,mesmo que mande
+compilar */
+let code = 70;
+console.log(code);
