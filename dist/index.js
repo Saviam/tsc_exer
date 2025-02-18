@@ -1,10 +1,14 @@
 "use strict";
-class Users {
-    constructor(n, b) {
-        this.name = n;
-        this.balance = b;
+let product1;
+product1 = {
+    name: 'Apple',
+    price: 2,
+    itemPurchased(message) {
+        console.log(message + ' ' + this.name);
     }
+};
+product1.itemPurchased('Voce acabou de comprar uma');
+function addToCart(item) {
+    console.log(`Adding "${item.title}" to cart.`);
 }
-const user1 = new Users('Saviam', 10);
-const user2 = new Users('Bruno', 20);
-console.log(user2);
+addToCart({ id: 1, title: 'shoes' });

@@ -257,28 +257,92 @@ permitido para ser inserido no input ou variavel */
 
 
 
- //---------------Classes----------------
+//  //---------------Classes----------------
 
-/*A Classe é uma 'fábrica' de objetos, 
-q podem ser cadastro de pessoas, de produtos, 
-login, etc. É o 'esqueleto' de tudo. Voce 
-cria objetos com as propriedades dentro da classe.
-Só instanciar com o 'new' e passar o valores dos parametros
-definidos dentro do 'constructor'.
-e precisa usar o 'this' para associar as propriedades
-às variaveis dentro do constructor */
+// /*A Classe é uma 'fábrica' de objetos, 
+// q podem ser cadastro de pessoas, de produtos, 
+// login, etc. É o 'esqueleto' de tudo. Voce 
+// cria objetos com as propriedades dentro da classe.
+// Só instanciar com o 'new' e passar o valores dos parametros
+// definidos dentro do 'constructor'.
+// e precisa usar o 'this' para associar as propriedades
+// às variaveis dentro do constructor */
 
 
- class Users {
-    name: string
-    balance: number
+//  class Users {
+//     name: string
+//     private balance: number /*Usando o 'private' 
+//     só pode ser acessado aqui e não pode alterar */
+   
+   
 
-    constructor(n: string, b: number){
-        this.name = n
-        this.balance = b
-    }
- }
+//     constructor(n: string, b: number){
+//         this.name = n
+//         this.balance = b
+//     }
+
+//    // adicionando um metodo
+   
+//    addMoney (amount: number){
+//     this.balance += amount //aqui ele soma o valor que tem com o que for adicionado 
+    
+//     }
+
+//  }
  
- const user1 = new Users('Saviam', 10)
- const user2 = new Users('Bruno', 20)
- console.log(user2)
+//  const user1 = new Users('Saviam', 90)
+//  user1.addMoney(100)
+
+
+
+//  const user2 = new Users('Bruno', 20)
+//  console.log(user1)
+
+
+//-------------Interfaces---------------
+
+/* Usando Interface ao inves de Classe, quando for criar
+um objeto, precisa ter obrigatoriamente todas as propriedades
+declaradas na interface (Item nesse caso) */
+
+interface Item{
+    name: string
+    price: number
+
+    itemPurchased(message: string):void
+    
+}
+
+let product1: Item
+
+product1 ={
+    name: 'Apple',
+    price: 2,
+    itemPurchased(message: string){
+        console.log(message + ' '+ this.name)/*
+        usando ' ' com espaço entre ela e vazio, 
+        é o jeito certo de colocar espaço entre o código
+        e a mensagem, e não dando espaco direto na mensagem
+        antes de fechar as aspas  */
+    }
+}
+
+product1.itemPurchased('Voce acabou de comprar uma')
+
+
+
+// Day 5 - Exercise 1
+
+interface CartItem {
+    id: number, 
+    title: string, 
+    variantId?: number /*colocando '?' depois da propriedade
+    ela se torna opcional, e não da erro */
+}
+
+function addToCart(
+    item: CartItem) {
+    console.log(`Adding "${item.title}" to cart.`);
+  }
+
+  addToCart({id: 1, title: 'shoes'});
