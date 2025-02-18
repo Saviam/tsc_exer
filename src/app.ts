@@ -3,5 +3,8 @@ console.log('hello')
 
 function productPrice(price: number){
  
-    console.log(price)
+    if (price>20){
+        return price
+    }
+    return
 }
