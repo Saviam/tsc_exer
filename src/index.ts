@@ -255,6 +255,30 @@ permitido para ser inserido no input ou variavel */
  ele excluiu atualizações no app.js,mesmo que mande
  compilar */
 
-let code: number = 70
-console.log(code)
 
+
+ //---------------Classes----------------
+
+/*A Classe é uma 'fábrica' de objetos, 
+q podem ser cadastro de pessoas, de produtos, 
+login, etc. É o 'esqueleto' de tudo. Voce 
+cria objetos com as propriedades dentro da classe.
+Só instanciar com o 'new' e passar o valores dos parametros
+definidos dentro do 'constructor'.
+e precisa usar o 'this' para associar as propriedades
+às variaveis dentro do constructor */
+
+
+ class Users {
+    name: string
+    balance: number
+
+    constructor(n: string, b: number){
+        this.name = n
+        this.balance = b
+    }
+ }
+ 
+ const user1 = new Users('Saviam', 10)
+ const user2 = new Users('Bruno', 20)
+ console.log(user2)
