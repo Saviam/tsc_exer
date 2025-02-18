@@ -1,18 +1,11 @@
 "use strict";
-let product1;
-product1 = {
-    name: 'Apple',
-    price: 2,
-    itemPurchased(message) {
-        console.log(message + ' ' + this.name);
-    }
-};
-product1.itemPurchased('Voce acabou de comprar uma');
-class Person {
-    constructor(name, age) {
+class User {
+    constructor(name, id) {
         this.name = name;
-        this.age = age;
+        this.id = id;
     }
 }
-const jane = new Person('Jane', 31);
-console.log(`${jane.name} is ${jane.age} years old.`);
+const user = new User('Dog', 1);
+console.log(user.id);
+user.name = 'Harold';
+console.log(`User:`, user);

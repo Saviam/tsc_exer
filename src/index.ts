@@ -272,7 +272,8 @@ permitido para ser inserido no input ou variavel */
 //  class Users {
 //     name: string
 //     private balance: number /*Usando o 'private' 
-//     só pode ser acessado aqui e não pode alterar */
+//     só pode ser acessado aqui e não pode alterar 
+// mas acredito que funcione somente para classes e não interface*/
    
    
 
@@ -305,29 +306,29 @@ permitido para ser inserido no input ou variavel */
 um objeto, precisa ter obrigatoriamente todas as propriedades
 declaradas na interface (Item nesse caso) */
 
-interface Item{
-    name: string
-    price: number
+// interface Item{
+//     name: string
+//     price: number
 
-    itemPurchased(message: string):void
+//     itemPurchased(message: string):void
     
-}
+// }
 
-let product1: Item
+// let product1: Item
 
-product1 ={
-    name: 'Apple',
-    price: 2,
-    itemPurchased(message: string){
-        console.log(message + ' '+ this.name)/*
-        usando ' ' com espaço entre ela e vazio, 
-        é o jeito certo de colocar espaço entre o código
-        e a mensagem, e não dando espaco direto na mensagem
-        antes de fechar as aspas  */
-    }
-}
+// product1 ={
+//     name: 'Apple',
+//     price: 2,
+//     itemPurchased(message: string){
+//         console.log(message + ' '+ this.name)/*
+//         usando ' ' com espaço entre ela e vazio, 
+//         é o jeito certo de colocar espaço entre o código
+//         e a mensagem, e não dando espaco direto na mensagem
+//         antes de fechar as aspas  */
+//     }
+// }
 
-product1.itemPurchased('Voce acabou de comprar uma')
+// product1.itemPurchased('Voce acabou de comprar uma')
 
 
 
@@ -350,22 +351,85 @@ product1.itemPurchased('Voce acabou de comprar uma')
 //---------------------------------------------
 
 
-// Day 5 - Exercise 2
+// Day 5 - Exercise 2 ----implements
 
 
-interface data{
-    name: string,
-    age: number
+// interface data{
+//     name: string,
+//     age: number
+// }
+
+
+// class Person implements data {
+
+//     constructor(
+//         public name: string, 
+//         public age: number) {}
+//   }
+
+//   const jane = new Person('Jane', 31);
+
+//   console.log(`${jane.name} is ${jane.age} years old.`);
+
+
+  //-----------------------------------------------
+
+
+
+  // Day 5 - Exercise 3
+
+
+// class MC {
+//     greet (event:string = 'party'): string {
+//       return `Welcome to the ${event}`;
+//     }
+//   }
+
+//   const mc = new MC();
+//   console.log(mc.greet('show'));
+
+//------------------------------
+
+
+// Day 5 - Exercise 4
+
+// class Employee {
+    
+//     constructor(public title: string, public salary: number) {}
+// }
+// //     title: string;
+// //     salary: number;
+// //     constructor(title: string, salary: number) {
+// //       this.title = title;
+// //       this.salary = salary;
+// //   } /*O exercicio inicial era assim, mas ele removeu as declarações
+// // de title e salary, porque já estavam declaradas dentro do constructor, 
+// // e também tirou o this. colocando 'public' direto antes das propriedades, 
+// // substituindo o this. */
+
+//   const employee = new Employee('Engineer', 100000);
+
+//   console.log(`The new employee's title is ${employee.title} and they earn $ ${employee.salary}.`);
+
+
+  //--------------------------------------------------
+
+  // Day 5 - Exercise 5
+
+interface UserSchema {
+    id: number
+    name: string
 }
 
+class User implements UserSchema {
+    constructor(public name: string,  readonly id: number) {}
+}
 
-class Person implements data {
+const user = new User('Dog', 1)
 
-    constructor(
-        public name: string, 
-        public age: number) {}
-  }
+console.log(user.id)
 
-  const jane = new Person('Jane', 31);
+user.name = 'Harold' // pode mudar
+// user.id = 5 // nao pode mudar
 
-  console.log(`${jane.name} is ${jane.age} years old.`);
+console.log(`User:`, user)
