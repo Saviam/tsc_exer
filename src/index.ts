@@ -272,8 +272,7 @@ permitido para ser inserido no input ou variavel */
 //  class Users {
 //     name: string
 //     private balance: number /*Usando o 'private' 
-//     só pode ser acessado aqui e não pode alterar 
-// mas acredito que funcione somente para classes e não interface*/
+//     só pode ser acessado dentro da class, fora da class não. E não pode ser alterado*/
    
    
 
@@ -416,20 +415,41 @@ declaradas na interface (Item nesse caso) */
 
   // Day 5 - Exercise 5
 
-interface UserSchema {
-    id: number
-    name: string
-}
+// interface UserSchema {
+//     id: number
+//     name: string
+// }
 
-class User implements UserSchema {
-    constructor(public name: string,  readonly id: number) {}
-}
+// class User implements UserSchema {
+//     constructor(public name: string,  readonly id: number) {} //USANDO O readonly, voce consegue acessar fora da class, mas não consegue alterar, já no private, nem acessa nem altera
+// }
 
-const user = new User('Dog', 1)
+// const user = new User('Dog', 1)
 
-console.log(user.id)
+// console.log(user.id)
 
-user.name = 'Harold' // pode mudar
-// user.id = 5 // nao pode mudar
+// user.name = 'Harold' // pode mudar
+// // user.id = 5 // nao pode mudar
 
-console.log(`User:`, user)
+// console.log(`User:`, user)
+
+
+//-------------------------------------
+
+
+// class Movies{
+//     //readonly id:number
+//    // name:string
+//    // quando se usa o 'private', coloca se o underscore "_" antes do nome da propriadade
+//     constructor(
+//         public readonly id:number,
+//         public name: string, 
+//         private _price :number
+//         ){
+//        // this.id = id
+//       //  this.name = name
+//     }
+// }
+
+// let movie1 = new Movies(1, 'Dejavu', 20)
+// console.log(movie1)
