@@ -8,7 +8,11 @@ product1 = {
     }
 };
 product1.itemPurchased('Voce acabou de comprar uma');
-function addToCart(item) {
-    console.log(`Adding "${item.title}" to cart.`);
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
 }
-addToCart({ id: 1, title: 'shoes' });
+const jane = new Person('Jane', 31);
+console.log(`${jane.name} is ${jane.age} years old.`);

@@ -333,16 +333,39 @@ product1.itemPurchased('Voce acabou de comprar uma')
 
 // Day 5 - Exercise 1
 
-interface CartItem {
-    id: number, 
-    title: string, 
-    variantId?: number /*colocando '?' depois da propriedade
-    ela se torna opcional, e não da erro */
+// interface CartItem {
+//     id: number, 
+//     title: string, 
+//     variantId?: number /*colocando '?' depois da propriedade
+//     ela se torna opcional, e não da erro */
+// }
+
+// function addToCart(
+//     item: CartItem) {
+//     console.log(`Adding "${item.title}" to cart.`);
+//   }
+
+//   addToCart({id: 1, title: 'shoes'});
+
+//---------------------------------------------
+
+
+// Day 5 - Exercise 2
+
+
+interface data{
+    name: string,
+    age: number
 }
 
-function addToCart(
-    item: CartItem) {
-    console.log(`Adding "${item.title}" to cart.`);
+
+class Person implements data {
+
+    constructor(
+        public name: string, 
+        public age: number) {}
   }
 
-  addToCart({id: 1, title: 'shoes'});
+  const jane = new Person('Jane', 31);
+
+  console.log(`${jane.name} is ${jane.age} years old.`);
