@@ -460,21 +460,46 @@ declaradas na interface (Item nesse caso) */
 
 //---------INDEX SIGNATURE--------------
 
-class HotelRooms{
-    [roonNumber: string]: string
-/*Colocando dentro de chaves uma propriedade, seu typo, 
-e definindo essa chave como string, voce cria propriedades
-dinamicamente quando for instanciar um objeto, como no exemplo
-abaixo sendo o room.A201, room.A202, etc */    
+// class HotelRooms{
+//     [roonNumber: string]: string
+// /*Colocando dentro de chaves uma propriedade, seu typo, 
+// e definindo essa chave como string, voce cria propriedades
+// dinamicamente quando for instanciar um objeto, como no exemplo
+// abaixo sendo o room.A201, room.A202, etc */    
+// }
+
+// let room = new HotelRooms()
+
+// room.A201 = 'Saviam'
+// room.A202 = 'Bruno'
+// room.A15 = 'Rodrigues'
+
+// console.log(room)
+
+
+// //-------------------------------------------
+
+
+
+class Person{
+    constructor (public firstname: string,
+        public lastname:string,
+        public age: number)
+        {}
+        greet (){
+            console.log('Hi')
+        }
 }
 
-let room = new HotelRooms()
+// Cliente do banco
 
-room.A201 = 'Saviam'
-room.A202 = 'Bruno'
-room.A15 = 'Rodrigues'
+class Clients extends Person{
+    balance(){
+        console.log('Seu balanço é de $100')
+    }
+}
 
-console.log(room)
-
-
-//-------------------------------------------
+let client1 = new Clients('Saviam', 'Bruno', 36)
+client1.greet /* aqui ele puxou o metodo diretoda classe Person
+sem precisar criar, porque esta usando a 'herança' (inheritante)
+Só funciona em typescript, não funciona em javascript*/
