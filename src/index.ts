@@ -453,3 +453,28 @@ declaradas na interface (Item nesse caso) */
 
 // let movie1 = new Movies(1, 'Dejavu', 20)
 // console.log(movie1)
+
+
+
+//-----------------------------------------------
+
+//---------INDEX SIGNATURE--------------
+
+class HotelRooms{
+    [roonNumber: string]: string
+/*Colocando dentro de chaves uma propriedade, seu typo, 
+e definindo essa chave como string, voce cria propriedades
+dinamicamente quando for instanciar um objeto, como no exemplo
+abaixo sendo o room.A201, room.A202, etc */    
+}
+
+let room = new HotelRooms()
+
+room.A201 = 'Saviam'
+room.A202 = 'Bruno'
+room.A15 = 'Rodrigues'
+
+console.log(room)
+
+
+//-------------------------------------------
