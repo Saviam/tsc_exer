@@ -1,10 +1,10 @@
  
-console.log('hello')
+// console.log('hello')
 
-function productPrice(price: number){
+// function productPrice(price: number){
  
-    if (price>20){
-        return price
-    }
-    return
-}
+//     if (price>20){
+//         return price
+//     }
+//     return
+// }
